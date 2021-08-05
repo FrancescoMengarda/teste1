@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        2) Crie uma função dobrarEm5Segundos(numero, cb) que dobre o valor de um número após 5 segundos. Se o valor recebido não for um número
+        ele irá chamar a cb passando um erro. 
+
+        callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+        Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O resultado é [result]".
+        */
+        class NotANumberError extends Error {
+            constructor(message){
+                super(message)
+                this.name = "NotANumberError"
+            }
+        }
+
+        try {
+            setTimeout(dobrarEm5Segundos, 5000, 5)
+        } catch (err) {
+            callback("Não é um número");
+        }
+
+        function dobrarEm5Segundos(numero, cb) {
+            if(isNaN(numero)) callback();
+            return `A operação foi bem sucedida! O resultado é ${numero * 2}`;
+        } 
+
+
+        function callback(error) {
+            throw new NotANumberError (`A operação falhou! ${error}`);
+        }
+    </script>
+</body>
+</html>

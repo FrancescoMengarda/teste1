@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: "Arial", sans-serif;
+    }
+    section {
+        text-align: center;
+    }
+    .game--container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        width: 306px;
+        margin: 50px auto;
+    }
+    .cell {
+        font-family: "Permanent Marker", cursive;
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 1px #333333;
+        border: 1px solid #333333;
+        cursor: pointer;
+    line-height: 100px;
+        font-size: 60px;
+    }
+    </style>
+</head>
+<body>
+    <body>
+        <section>
+            <h1 class="game--title">Tic Tac Toe</h1>
+            <div class="game--container">
+                <div data-cell-index="0" class="cell"></div>
+                <div data-cell-index="1" class="cell"></div>
+                <div data-cell-index="2" class="cell"></div>
+                <div data-cell-index="3" class="cell"></div>
+                <div data-cell-index="4" class="cell"></div>
+                <div data-cell-index="5" class="cell"></div>
+                <div data-cell-index="6" class="cell"></div>
+                <div data-cell-index="7" class="cell"></div>
+                <div data-cell-index="8" class="cell"></div>
+            </div>
+            <h2 class="game--status"></h2>
+            <button class="game--restart">Restart Game</button>
+        </section>
+    <script src="script.js"></script>
+    <!-- <script>
+        let table = document.querySelector("table");
+        let ultimaCor = "vermelho"; 
+        let selecionado = [false, false, false]
+                          [false, false, false]
+                          [false, false, false];  
+
+        table.addEventListener("click", (event) => {
+
+            if (ultimaCor == "vermelho") {
+                ficarAzul(event.target);
+                ultimaCor = "azul";
+            } else {
+                ficarVermelho(event.target);
+                ultimaCor = "vermelho";
+            }
+        })                
+
+        function ficarAzul(td) {
+            td.classList.toggle("azul");
+        }
+
+        function ficarVermelho(td) {
+            td.classList.toggle("vermelho");
+        }
+            
+        
+        function handlerClick() {
+            
+        }   
+        
+        limpar.addEventListener("click", handlerClick)
+
+        // function selecaoUnica(td) {
+        //     let azuis = table.querySelectorAll(".azul");
+        //     for (let elem of azuis) {
+        //         elem.classList.remove("azul");
+        //     }
+        //     td.classList.add("azul");
+        // }
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício erros</title>
+</head>
+<body>
+    <script>
+        function dobrarEm5Segundos(numero) {
+            if (!(n1 % 2 == 0)) throw new TypeError("Tipo de número inválido");
+            return numero * numero;
+        }
+        class TypeError extends Error {
+            constructor(message) {
+                super(message)
+                this.name = "TypeError"
+            }
+        }
+        setTimeout(dobrarEm5Segundos, 5000, n1);
+    </script>
+</body>
+</html>
