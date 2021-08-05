@@ -13,14 +13,9 @@ const fs = require("fs");
 const fsPromises = require("fs/promises");
 const path = require("path");
 
-async function getUserByName(name) {
-        try {
-            const data = (await fs.readFile(path.resolve("users.json"))).toString("utf-8");
+function getUserByName(name) {
+            const data = (await fsp.readFile(path.resolve("users.json"))).toString("utf-8");
             const users = JSON.parse(data);
             console.log(users);
             console.log(data);
-
-        } catch (err) {
-            console.log(err.message);
-        }
 };
